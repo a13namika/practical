@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registered Users</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    ul {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      background-color: #fff;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    p {
+      text-align: center;
+      color: #888;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+      const container = document.getElementById("userList");
+
+      if (users.length === 0) {
+        container.innerHTML = "<p>No users registered yet.</p>";
+        return;
+      }
+
+      let html = "<h2>Registered Users</h2><ul>";
+      users.forEach((user, index) => {
+        html += `<li><strong>${user.name}</strong><br>${user.email}</li>`;
+      });
+      html += "</ul>";
+
+      container.innerHTML = html;
+    };
+  </script>
+</head>
+<body>
+  <div id="userList"></div>
+</body>
+</html>

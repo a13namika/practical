@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "05fc",
+      "name": "sasw",
+      "email": "sejalsapkal13@gmail.com",
+      "password": "asdfgh"
+    },
+    {
+      "id": "3f07",
+      "name": "sajidhu",
+      "email": "sdfgn@gmail.com",
+      "password": "asdfgh"
+    },
+    {
+      "id": "5ad4",
+      "name": "quich",
+      "email": "quich@gmail.com",
+      "password": "123654fgh"
+    }
+  ]
+}
